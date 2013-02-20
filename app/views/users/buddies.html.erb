@@ -3,7 +3,7 @@
       <h1>Create a Ribbit</h1>
       <p>
         <%= form_for @ribbit do |f| %>
-            <%= f.textarea :content, class: 'ribbitText' %>
+            <%= f.text_area :content, class: 'ribbitText' %>
             <%= f.submit "Ribbit!" %>
         <% end %>
       </p>
@@ -14,7 +14,7 @@
   <% @ribbits.each do |ribbit| %>
       <div class="ribbitWrapper">
         <a href="<%= user_path ribbit.user %>">
-          <img class="avatar" src="<%= ribbit.user.avatar_url %>">
+          <img class="avatar" src="<%= ribbit.user.avatar_hash %>">
           <span class="name"><%= ribbit.user.name %></span>
         </a>
         @<%= ribbit.user.username %>
