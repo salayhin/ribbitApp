@@ -12,6 +12,9 @@ RibbitApp::Application.routes.draw do
   get "sessions/destroy"
 
   post "sessions/create"
+
+  get 'buddies', to: 'users#buddies', as: 'buddies'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

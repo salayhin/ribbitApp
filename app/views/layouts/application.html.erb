@@ -10,6 +10,9 @@
     <img src="/gfx/logo.png">
     <span>Twitter Clone</span>
     <%= link_to "Public Ribbits", ribbits_path %>
+    <%= link_to "Public Profiles", users_path %>
+    <%= link_to "My Profile", current_user %>
+    <%= link_to "Buddies' Ribbits", buddies_path %>
     <% if current_user %>
         <%= link_to "Log Out", sessions_destroy_path %>
     <% else %>
